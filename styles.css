@@ -1,0 +1,209 @@
+/* Import Oxanium font */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css');
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: #000;
+    --cta-btn: #20b2aa;
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--primary-color);
+}
+
+.stApp {
+    background-color: var(--secondary-color) !important;
+    font-family: 'Oxanium', sans-serif;
+    user-select: none;
+}
+
+/* Cursor styling */
+#cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Modern navigation */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: transparent;
+}
+
+.nav-logo {
+    width: 100px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 0.2em var(--cta-btn);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    font-size: 1.4em;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.8s ease-in-out;
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-link.brand-text {
+    font-size: 2em;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    position: relative;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--cta-btn));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(32, 178, 170, 0.3);
+    transition: all 0.3s ease;
+}
+
+.nav-link.brand-text:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 25px rgba(32, 178, 170, 0.5);
+}
+
+.brand-highlight {
+    color: var(--cta-btn);
+    -webkit-text-fill-color: var(--cta-btn);
+    position: relative;
+}
+
+/* Hero section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 90vh;
+    padding: 2rem;
+    margin: -4rem -4rem 2rem -4rem;
+}
+
+.hero-content {
+    flex: 1;
+    padding: 0 2rem;
+}
+
+.hero-title {
+    font-size: 3em;
+    letter-spacing: 0.1rem;
+    text-shadow: 0 0 1rem #000;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2em;
+    letter-spacing: 0.1rem;
+    text-shadow: 0 0 1rem #000;
+    margin-bottom: 2.2rem;
+}
+
+.hero-features-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2em;
+    padding: 1rem;
+    background: rgba(32, 178, 170, 0.1);
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateX(10px);
+}
+
+.feature-item i {
+    color: var(--cta-btn);
+    font-size: 1.5em;
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: var(--cta-btn);
+    border: none;
+    padding: 0.5em 2.5rem;
+    border-radius: 3em;
+    font-size: 1.6em;
+    font-weight: 900;
+    box-shadow: inset 0 0 1rem;
+    transition: background-color 1.2s ease;
+    font-family: 'Oxanium', sans-serif;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Remove Streamlit default styling */
+.stApp > header {
+    display: none;
+}
+
+.main .block-container {
+    padding: 0 !important;
+    max-width: 100% !important;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .hero-content {
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    
+    .nav-container {
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+
+    .hero-features-container {
+        padding: 1rem;
+    }
+    
+    .feature-item {
+        font-size: 1em;
+    }
+}

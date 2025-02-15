@@ -1,0 +1,13 @@
+[theme]
+primaryColor = "#00BCD4"  # PayTjek turkis
+backgroundColor = "#F8FAFF"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#1A1A1A"
+font = "Montserrat"
+
+[server]
+port = 8501
+enableCORS = false
+
+[browser]
+gatherUsageStats = false
